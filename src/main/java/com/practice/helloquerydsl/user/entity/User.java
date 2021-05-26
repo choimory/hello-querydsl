@@ -1,9 +1,6 @@
 package com.practice.helloquerydsl.user.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -12,6 +9,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Builder
+@Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor

@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.practice.helloquerydsl.board.type.ArticleType;
 import com.practice.helloquerydsl.boardComment.entity.BoardComment;
 import com.practice.helloquerydsl.user.entity.User;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
@@ -17,6 +14,7 @@ import java.util.List;
 
 @Entity
 @Builder
+@Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor

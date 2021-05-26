@@ -3,10 +3,7 @@ package com.practice.helloquerydsl.boardComment.entity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.practice.helloquerydsl.board.entity.Board;
 import com.practice.helloquerydsl.user.entity.User;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
@@ -15,6 +12,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Builder
+@Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
