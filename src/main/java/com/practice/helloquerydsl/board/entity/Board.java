@@ -30,7 +30,7 @@ public class Board {
     private ArticleType articleType;
     @JsonManagedReference
     @OneToOne
-    @JoinColumn(name = "ID")
+    @JoinColumn(name = "USER_ID")
     private User user;
     @JsonManagedReference
     @OneToMany(mappedBy = "board")
