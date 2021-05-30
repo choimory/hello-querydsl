@@ -24,7 +24,7 @@ public class BoardComment {
     private String content;
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID")
+    @JoinColumn(name = "BOARD_ID")
     private Board board;
     @OneToOne
     private User user;
