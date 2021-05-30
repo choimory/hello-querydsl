@@ -22,4 +22,7 @@ public class BoardDto {
     private Boolean deleteAt;
     private LocalDateTime registDateTime;
     private LocalDateTime updateDateTime;
+
+    private LocalDateTime from;
+    private LocalDateTime to;
 }

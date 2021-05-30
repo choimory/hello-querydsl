@@ -41,15 +41,22 @@ public class CustomBoardRepositoryImpl implements CustomBoardRepository{
     private BooleanBuilder getBoardsDynamicallyWhere(Board param, LocalDateTime from, LocalDateTime to){
         BooleanBuilder booleanBuilder = new BooleanBuilder();
 
+        //contains title
         if(StringUtils.hasLength(param.getTitle())){
             booleanBuilder.and(board.title.contains(param.getTitle()));
         }
+
+        //contains content
         if(StringUtils.hasLength(param.getContent())){
             booleanBuilder.and(board.content.contains(param.getContent()));
         }
+
+        //eq nickname
         if(StringUtils.hasLength(param.getUser().getNickname())){
             booleanBuilder.and(board.user.nickname.eq(param.getUser().getNickname()));
         }
+
+        //after, before or between date
         if(from!=null && to==null){
             booleanBuilder.and(board.registDateTime.after(from));
         }else if(from==null && to!=null){
