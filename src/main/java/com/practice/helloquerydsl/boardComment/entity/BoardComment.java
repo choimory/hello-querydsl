@@ -2,6 +2,7 @@ package com.practice.helloquerydsl.boardComment.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.practice.helloquerydsl.board.entity.Board;
+import com.practice.helloquerydsl.common.entity.CommonDateTimeEntity;
 import com.practice.helloquerydsl.user.entity.User;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class BoardComment {
+public class BoardComment extends CommonDateTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,10 +31,4 @@ public class BoardComment {
     private User user;
     @Column
     private Boolean deleteAt;
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private LocalDateTime registDateTime;
-    @LastModifiedDate
-    @Column
-    private LocalDateTime updateDateTime;
 }
