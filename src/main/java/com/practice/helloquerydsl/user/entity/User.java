@@ -1,5 +1,6 @@
 package com.practice.helloquerydsl.user.entity;
 
+import com.practice.helloquerydsl.common.entity.CommonDateTimeEntity;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 
@@ -13,7 +14,7 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User extends CommonDateTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,7 +28,4 @@ public class User {
     private Boolean isActivate;
     @Column
     private LocalDate birthDay;
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private LocalDateTime registDateTime;
 }
