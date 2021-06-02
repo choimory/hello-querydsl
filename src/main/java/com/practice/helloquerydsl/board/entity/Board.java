@@ -33,8 +33,7 @@ public class Board extends CommonDateTimeEntity {
     @OneToOne
     @JoinColumn(name = "USER_ID")
     private User user;
-    @JsonManagedReference
-    @OneToMany(mappedBy = "board")
+    @OneToMany(mappedBy = "board", fetch = FetchType.LAZY)
     private List<BoardComment> boardComments;
     @Column
     private Boolean deleteAt;
