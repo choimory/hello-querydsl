@@ -23,7 +23,6 @@ public class BoardComment extends CommonDateTimeEntity {
     private Long id;
     @Column(length = 255, nullable = false)
     private String content;
-    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BOARD_ID")
     private Board board;
